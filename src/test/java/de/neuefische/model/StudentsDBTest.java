@@ -2,6 +2,8 @@ package de.neuefische.model;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class StudentsDBTest {
@@ -13,10 +15,19 @@ class StudentsDBTest {
         Students studentTwo = new Students("Werner", 1234,"Hauptstr. 12, 22043 Hamburg", 12345);
         Students studentThree = new Students("Kristin", 1235, "Hauptstr. 12, 22043 Hamburg", 12345);
 
-        StudentsDB allStudents = new StudentsDB(new Students[]{studentOne, studentTwo, studentThree});
+        ArrayList<Students> allStudents =  new ArrayList<>();
+        allStudents.add(studentOne);
+        allStudents.add(studentTwo);
+        allStudents.add(studentThree);
+
+        StudentsDB studentsDB = new StudentsDB(allStudents);
+
+
         //WHEN
-        Students[] actual = allStudents.getAllStudents();
+        ArrayList<Students> actual = studentsDB.getAllStudents();
         //THEN
+        assertEquals(allStudents,actual);
+
 
     }
 }
