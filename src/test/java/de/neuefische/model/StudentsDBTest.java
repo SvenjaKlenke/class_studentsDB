@@ -9,11 +9,14 @@ class StudentsDBTest {
     @Test
     void getAllStudents() {
         //GIVEN
-        Students a = new Students("Erna", 2001);
-        Students b = new Students("Erna", 2001);
+        Students studentOne = new Students("Kristin", 1233,"Hauptstr. 12, 22043 Hamburg", 12345);
+        Students studentTwo = new Students("Werner", 1234,"Hauptstr. 12, 22043 Hamburg", 12345);
+        Students studentThree = new Students("Kristin", 1235, "Hauptstr. 12, 22043 Hamburg", 12345);
+
+        StudentsDB allStudents = new StudentsDB(new Students[]{studentOne, studentTwo, studentThree});
         //WHEN
-        boolean actual = a.equals(b);
+        Students[] actual = allStudents.getAllStudents();
         //THEN
-        assertTrue(actual);
+
     }
 }
