@@ -9,7 +9,7 @@ import de.neuefische.model.StudentsDB;
 public class Main {
     public static void main(String[] args) {
 
-        Students studentOne = new Students("Kristin", 1233,"Hauptstr. 12, 22043 Hamburg", 12345);
+        /*Students studentOne = new Students("Kristin", 1233,"Hauptstr. 12, 22043 Hamburg", 12345);
         Students studentTwo = new Students("Werner", 1234,"Hauptstr. 12, 22043 Hamburg", 12345);
         Students studentThree = new Students("Kristin", 1235,"Hauptstr. 12, 22043 Hamburg", 12345);
 
@@ -22,7 +22,7 @@ public class Main {
         BiologyStudent biologyStudent = new BiologyStudent("AlexF", 1237,"Hauptstr. 12, 22043 Hamburg", 12345, false);
 
         System.out.println(computerScienceStudent.getCardNumber());
-        System.out.println(biologyStudent.getAdress());
+        System.out.println(biologyStudent.getAdress());*/
 
 
     }
