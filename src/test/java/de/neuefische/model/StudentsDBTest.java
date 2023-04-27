@@ -13,9 +13,9 @@ class StudentsDBTest {
     @Test
     void getAllStudents() {
         //GIVEN
-        Students studentOne = new Students("Kristin", 1233,"Hauptstr. 12, 22043 Hamburg", 12345);
-        Students studentTwo = new Students("Werner", 1234,"Hauptstr. 12, 22043 Hamburg", 12345);
-        Students studentThree = new Students("Kristin", 1235, "Hauptstr. 12, 22043 Hamburg", 12345);
+        Students studentOne = new Students("Kristin", 1233,"Hauptstr. 12, 22043 Hamburg", "12345");
+        Students studentTwo = new Students("Werner", 1234,"Hauptstr. 12, 22043 Hamburg", "12345");
+        Students studentThree = new Students("Kristin", 1235, "Hauptstr. 12, 22043 Hamburg", "12345" );
 
         Map<Integer,Students> allStudents =  new HashMap<>();
         allStudents.put(studentOne.getStudentsID(), studentOne);
@@ -29,6 +29,32 @@ class StudentsDBTest {
         Map<Integer,Students> actual = studentsDB.getAllStudents();
         //THEN
         assertEquals(allStudents,actual);
+
+
+    }
+
+    @Test
+    void getAllStudents_2() {
+        //GIVEN
+        Students studentOne = new Students("Kristin", 1233,"Hauptstr. 12, 22043 Hamburg", "12345");
+        Students studentTwo = new Students("Werner", 1234,"Hauptstr. 12, 22043 Hamburg", "12345");
+        Students studentThree = new Students("Kristin", 1235, "Hauptstr. 12, 22043 Hamburg", "12345" );
+
+        StudentsDB studentsDB = new StudentsDB();
+        studentsDB.addStudent(studentOne);
+        studentsDB.addStudent(studentTwo);
+        studentsDB.addStudent(studentThree);
+
+        Map<Integer, Students> expected = Map.of(
+                studentOne.getStudentsID(), studentOne,
+                studentTwo.getStudentsID(),studentTwo,
+                studentThree.getStudentsID(),studentThree
+        );
+
+        //WHEN
+        Map<Integer,Students> actual = studentsDB.getAllStudents();
+        //THEN
+        assertEquals(expected,actual);
 
 
     }

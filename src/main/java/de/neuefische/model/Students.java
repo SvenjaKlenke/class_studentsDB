@@ -1,7 +1,5 @@
 package de.neuefische.model;
 
-import java.util.Objects;
-
 public class Students {
 
     private String name;
@@ -9,7 +7,7 @@ public class Students {
 
     private String adress;
 
-    private int cardNumber;
+    private String cardNumber;
 
     public String getAdress() {
         return adress;
@@ -19,11 +17,11 @@ public class Students {
         this.adress = adress;
     }
 
-    public int getCardNumber() {
+    public String getCardNumber() {
         return cardNumber;
     }
 
-    public void setCardNumber(int cardNumber) {
+    public void setCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
     }
 
@@ -47,7 +45,7 @@ public class Students {
 
     }
 
-    public Students(String name, int studentsID, String adress, int cardNumber) {
+    public Students(String name, int studentsID, String adress, String cardNumber) {
         this.name = name;
         this.studentsID = studentsID;
         this.adress = adress;

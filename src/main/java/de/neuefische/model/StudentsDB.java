@@ -1,13 +1,15 @@
 package de.neuefische.model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 public class StudentsDB {
 
-    private Map <Integer,Students> allStudents;
+    private Map <Integer,Students> allStudents = new HashMap<>();
+
+    public  Students addStudent (Students students){
+        allStudents.put(students.getStudentsID(),students);
+        return students;
+    }
 
     public StudentsDB(Map<Integer, Students> allStudents) {
         this.allStudents = allStudents;

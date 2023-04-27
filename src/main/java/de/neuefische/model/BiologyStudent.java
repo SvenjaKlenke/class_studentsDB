@@ -1,13 +1,11 @@
 package de.neuefische.model;
 
-import java.util.Objects;
-
 public class BiologyStudent extends Students implements Citzen{
 
     private boolean haveGarden;
 
 
-    public BiologyStudent(String name, int studentsID, String adress, int cardNumber, boolean haveGarden) {
+    public BiologyStudent(String name, int studentsID, String adress, String cardNumber, boolean haveGarden) {
         super(name, studentsID, adress, cardNumber);
         this.haveGarden = haveGarden;
     }
@@ -31,7 +29,7 @@ public class BiologyStudent extends Students implements Citzen{
     }
 
     @Override
-    public int getIdentityCardNumber() {
+    public String getIdentityCardNumber() {
         return super.getCardNumber();
     }
 }

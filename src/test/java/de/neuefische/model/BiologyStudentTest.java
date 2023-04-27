@@ -9,7 +9,7 @@ class BiologyStudentTest {
     @Test
     void getAdress_return_String() {
         //GIVEN
-        BiologyStudent biologyStudent = new BiologyStudent("AlexF", 1237,"Hauptstr. 12, 22043 Hamburg", 12345, false);
+        BiologyStudent biologyStudent = new BiologyStudent("AlexF", 1237,"Hauptstr. 12, 22043 Hamburg", "12345", false);
         String expected = "Hauptstr. 12, 22043 Hamburg";
         //WHEN
         String actual = biologyStudent.getAdress();
@@ -20,10 +20,10 @@ class BiologyStudentTest {
     @Test
     void getIdentityCardNumber_return_ID() {
         //GIVEN
-        BiologyStudent biologyStudent = new BiologyStudent("AlexF", 1237,"Hauptstr. 12, 22043 Hamburg", 12345, false);
-        int expected = 12345;
+        BiologyStudent biologyStudent = new BiologyStudent("AlexF", 1237,"Hauptstr. 12, 22043 Hamburg", "12345", false);
+        String expected = "12345";
         //WHEN
-        int actual = biologyStudent.getIdentityCardNumber();
+        String actual = biologyStudent.getIdentityCardNumber();
         //THEN
         assertEquals(expected, actual);
     }

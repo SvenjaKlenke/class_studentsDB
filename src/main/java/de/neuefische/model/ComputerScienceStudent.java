@@ -1,7 +1,5 @@
 package de.neuefische.model;
 
-import java.util.Objects;
-
 public class ComputerScienceStudent extends Students implements Citzen {
 
     private boolean knowsWindows;
@@ -10,7 +8,7 @@ public class ComputerScienceStudent extends Students implements Citzen {
     public ComputerScienceStudent() {
     }
 
-    public ComputerScienceStudent(String name, int studentsID, String adress, int cardNumber, boolean knowsWindows) {
+    public ComputerScienceStudent(String name, int studentsID, String adress, String cardNumber, boolean knowsWindows) {
         super(name, studentsID, adress, cardNumber);
         this.knowsWindows = knowsWindows;
     }
@@ -37,7 +35,7 @@ public class ComputerScienceStudent extends Students implements Citzen {
     }
 
     @Override
-    public int getIdentityCardNumber() {
+    public String getIdentityCardNumber() {
         return super.getCardNumber();
     }
 }
